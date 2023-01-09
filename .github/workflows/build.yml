@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-linux
-        path: ${{ github.workspace }}
+        path: phantomsocks
   
   build-windows:
     runs-on: windows-latest
@@ -46,7 +46,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-windows
-        path: ${{ github.workspace }}
+        path: phantomsocks.exe
   
   build-macos:
     runs-on: macos-latest
@@ -68,4 +68,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-macos
-        path: ${{ github.workspace }}
+        path: phantomsocks
