@@ -21,7 +21,7 @@ jobs:
         go build -v -tags rawsocket ./...
     
     - name: Upload
-    - uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: build-linux
         path: ${{ github.workspace }}
@@ -42,7 +42,8 @@ jobs:
         go build -v -tags pcap ./...
         go build -v -tags windivert ./...
     
-    - uses: actions/upload-artifact@v3
+    - name: Upload
+      uses: actions/upload-artifact@v3
       with:
         name: build-windows
         path: ${{ github.workspace }}
@@ -62,7 +63,8 @@ jobs:
         go build -v ./...
         go build -v -tags pcap ./...
     
-    - uses: actions/upload-artifact@v3
+    - name: Upload
+      uses: actions/upload-artifact@v3
       with:
         name: build-macos
         path: ${{ github.workspace }}
