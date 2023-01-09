@@ -17,9 +17,8 @@ jobs:
     - name: Build
       run: |
         sudo apt update && sudo apt install -y libpcap-dev
-        go build -v ./...
-        go build -v -tags pcap ./...
-        go build -v -tags rawsocket ./...
+        go build -v
+        go build -v -tags rawsocket
     
     - name: Upload
       uses: actions/upload-artifact@v3
@@ -40,9 +39,8 @@ jobs:
 
     - name: Build
       run: |
-        go build -v ./...
-        go build -v -tags pcap ./...
-        go build -v -tags windivert ./...
+        go build -v
+        go build -v -tags windivert
     
     - name: Upload
       uses: actions/upload-artifact@v3
@@ -63,8 +61,8 @@ jobs:
 
     - name: Build
       run: |
-        go build -v ./...
-        go build -v -tags pcap ./...
+        go build -v
+        go build -v -tags pcap
     
     - name: Upload
       uses: actions/upload-artifact@v3
